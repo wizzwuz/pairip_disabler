@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Piarip Disabler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="main-header">
+      <h1>Pairip Disabler</h1>
+      <p>Manage apps with Pairip</p>
+    </header>
+
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Search apps..." class="search-input" />
+    </div>
+
+    <div class="loading-section" id="loadingSection">
+      <div class="spinner"></div>
+      <p>Loading installed apps...</p>
+    </div>
+
+    <div class="app-section" id="appSection" style="display: none;">
+      <div class="control-bar">
+        <label class="select-all">
+          <input type="checkbox" id="selectAll" />
+          <span class="checkmark"></span>
+          Select All
+        </label>
+        <div class="app-count" id="appCount">0 apps</div>
+      </div>
+      <div class="app-list" id="appList"></div>
+    </div>
+
+    <div class="action-section" id="actionSection" style="display: none;">
+      <div class="action-buttons">
+        <button id="disableButton" class="action-button danger">
+          <span class="button-text">Disable Selected Apps</span>
+          <div class="button-loading" style="display: none;">
+            <div class="button-spinner"></div>
+            Processing...
+          </div>
+        </button>
+        <button id="revertButton" class="action-button success">
+          <span class="button-text">Revert Selected Apps</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
