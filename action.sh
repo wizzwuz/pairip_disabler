@@ -1,5 +1,7 @@
 #!/system/bin/sh
 
+echo "+generating applist"
+
 MODDIR=${0%/*}
 WEBROOT=$MODDIR/webroot
 
@@ -26,3 +28,5 @@ echo '[]' > disabled.json
 
 # Set permissions (optional, KernelSU handles most)
 chmod 644 applist.json disabled.json
+
+echo "+applist generated successfully"
