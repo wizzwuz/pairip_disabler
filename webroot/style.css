@@ -1,0 +1,120 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.search-bar::placeholder {
+    color: #888;
+}
+
+.app-list {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+.app-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s;
+}
+
+.app-item:hover {
+    background-color: #1e1e1e;
+}
+
+.app-item:last-child {
+    border-bottom: none;
+}
+
+.app-name {
+    flex: 1;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.select-toggle {
+    transform: scale(1.2);
+    margin-left: 10px;
+}
+
+.save-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: #0d7377;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-button:hover {
+    background-color: #0b5c5e;
+}
+
+.save-button:disabled {
+    background-color: #333;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+.status.success {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+.status.error {
+    border-color: #f44336;
+    color: #f44336;
+}

@@ -1,0 +1,6 @@
+id=PairipDisabler
+name=Pairip Disabler
+version=1.0
+versionCode=1
+author=wizzwuz
+description=A simple Web UI module to disable pairip licence activity from apps
