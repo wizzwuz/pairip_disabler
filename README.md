@@ -1,4 +1,4 @@
-# pairip_disabler
+# pairip-disabler
 
 This module disables pairip license activity in apps. It can't disable libpairip.so.
 
