@@ -17,14 +17,16 @@ for PKG in $PACKAGES; do
   if [ $FIRST -eq 0 ]; then
     echo ',' >> applist.json
   fi
-  echo "\"$PKG\"" >> applist.json
+  echo "\"$PKG"\" >> applist.json
   FIRST=0
 done
 
 echo ']' >> applist.json
 
-# Create empty disabled.json
-echo '[]' > disabled.json
+# Create empty disabled.json only if it does not already exist
+if [ ! -f disabled.json ]; then
+  echo '[]' > disabled.json
+fi
 
 # Set permissions (optional, KernelSU handles most)
 chmod 644 applist.json disabled.json
