@@ -148,7 +148,7 @@ document.getElementById('saveButton').addEventListener('click', async () => {
     // Update disabled.json
     const newDisabled = Array.from(document.querySelectorAll('.select-toggle:checked')).map(cb => cb.dataset.pkg);
     const jsonStr = JSON.stringify(newDisabled);
-    const writeCmd = `echo '${jsonStr}' > /data/adb/modules/LicenseAppDisabler/webroot/disabled.json`;
+    const writeCmd = `echo '${jsonStr}' > /data/adb/modules/PairipDisabler/webroot/disabled.json`;
     try {
         await ksu.exec(writeCmd);
     } catch (error) {
